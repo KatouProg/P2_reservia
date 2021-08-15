@@ -19,7 +19,6 @@ body {
     width: 100%;
     max-width: 1440px;
     margin: auto;
-    /* background-color: aqua; */
   }
 
   .navbar {
@@ -140,7 +139,6 @@ body {
    height: auto;
    background-color: #F2F2F2;
    border-radius: 14px 0 0 14px;
-   /* background-color: blueviolet; */
  }
 
  .fa-map-marker-alt {
@@ -230,4 +228,65 @@ body {
 
 #infos p {
   display: inline;
+}
+
+/* Section Hébergement / Populaires */
+
+.hebergementsEtPlusPopulaires {
+  display: grid;
+  grid-template-columns: 65% 32%;
+  grid-column-gap: 30px;
+}
+
+.bloc {
+  background: #F2F2F2;
+  border-radius: 25px;
+}
+
+ .blocHotel {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   grid-row-gap: 20px;
+ }
+
+ .boxHebergements {
+   background-color: white;
+   width: 200px;
+}
+
+ .imgHebergements {
+   width: 100%;
+   height: 130px;
+   object-fit: cover;
+ }
+
+ .titreEtIcone {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 20px 20px 0 20px;
+}
+
+#h1PlusPop {
+  margin: none;
+}
+
+ .plusPop {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 20px;;
+  width: 300px;
+  height: 130px;
+}
+
+.boxPop {
+  background-color: white
+}
+
+.imgPop {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
 }
