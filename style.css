@@ -356,6 +356,14 @@ body {
   margin: 3px;
 }
 
+.etoiles2 {
+  margin-top: 80px;
+}
+
+.etoiles3 {
+  margin-top: 55px;
+}
+
 .hostingMainCardGradeIcon {
   font-size: 15px;
   color: #0065fc
@@ -371,6 +379,7 @@ body {
 
 #activites {
   margin-top: 80px;
+  padding: 30px;
 }
 
 .activitesGroup {
