@@ -431,3 +431,31 @@ body {
 #activite_6 {
   grid-area: 2/4/3/5;
 }
+
+
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  height: 300px;
+  max-width: 1440px;
+  margin: auto;
+  margin-top: 80px;
+  padding: 40px 0 0 40px;
+  background-color: #F2F2F2;
+}
+
+.blocsFooter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footerBloc {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerLien {
+  padding: 7px 0 7px 0;
+}
