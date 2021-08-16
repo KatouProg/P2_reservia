@@ -50,14 +50,6 @@ body {
     height: 3px;
     background: white;
   }
-
-  .navbar #navbarLienHebergements:hover > .sousLignementFx {
-    background: #0065fc;
-  }
-  
-  .navbar #navbarLienActivites:hover > .sousLignementFx {
-    background: #0065fc;
-  }
   
   #navbarLienSinscrire a {
     color: #0065fc;
@@ -96,10 +88,12 @@ body {
   
   .navbar #navbarLienActivites a:hover {
     color: #0065fc;
+    border-top: solid 3px #0065fc;
   }
 
   .navbar #navbarLienHebergements a:hover {
     color: #0065fc;
+    border-top: solid 3px #0065fc;
   }
   
   .navbar #navbarLienSinscrire {
@@ -519,7 +513,7 @@ body {
     grid-area: 2/1/3/2;
   }
 
-  ##navbarLienActivites {
+  #navbarLienActivites {
     grid-area: 2/2/3/3;
   }
 
@@ -609,6 +603,54 @@ body {
 }
 
 @media screen and (max-width: 580px) {
+
+  .navbar {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .navbar #navbarLienActivites a:hover {
+    color: #0065fc;
+    border-top: none;
+    border-bottom: solid 3px #0065fc;
+  }
+
+  .navbar #navbarLienHebergements a:hover {
+    color: #0065fc;
+    border-top: none;
+    border-bottom: solid 3px #0065fc;
+  }
+
+  #logo {
+    margin-left: 25px;
+  }
+
+  #navbarLienSinscrire {
+    margin-right: 25px;
+  }
+
+  .trouvezUn {
+    margin-left: 18%;
+    margin-right: 18%;
+    align-items: center;
+  }
+
+  #searchIcon {
+    display: block;
+    width: 50px;
+    border-radius: 25%;
+  }
+
+  #sButton {
+    display: none;
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 18%;
+    margin-right: 18%;
+  }
 
   .hebergements {
     background-color: white;
