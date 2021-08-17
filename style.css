@@ -31,7 +31,6 @@ body {
     align-items: center;
     grid-template-columns: 1fr 5fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    /* grid-template-areas: "logo.hebergement activites inscription"; */
   }
 
   #logo {
@@ -71,6 +70,7 @@ body {
   
   .navbar #navbarLienHebergements {
     grid-area: 1/3/2/4;
+    border-top: solid 3px white;
   }
   
   #navbarLienHebergements a {
@@ -80,6 +80,7 @@ body {
   .navbar #navbarLienActivites {
     grid-area: 1/4/2/5;
     color: black;
+    border-top: solid 3px white;
   }
   
   .navbar #navbarLienActivites a {
@@ -605,34 +606,71 @@ body {
 @media screen and (max-width: 580px) {
 
   .navbar {
-    display: flex;
-    align-items: baseline;
-  }
-
-  .navbar #navbarLienActivites a:hover {
-    color: #0065fc;
-    border-top: none;
-    border-bottom: solid 3px #0065fc;
-  }
-
-  .navbar #navbarLienHebergements a:hover {
-    color: #0065fc;
-    border-top: none;
-    border-bottom: solid 3px #0065fc;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "logo navbarLienSinscrire"
+    "navbarLienHebergements navbarLienActivites";
   }
 
   #logo {
-    margin-left: 25px;
+    margin-left: 22%;
   }
 
   #navbarLienSinscrire {
-    margin-right: 25px;
+    margin-right: 22%;
+  }
+
+  .navbar img {
+    grid-area: logo;
+  }
+
+  .navbar #navbarLienHebergements {
+    flex-direction: column-reverse;
+    grid-area: navbarLienHebergements;
+  }
+
+  .navbar #navbarLienActivites {
+    flex-direction: column-reverse;
+    grid-area: navbarLienActivites;
+  }
+
+  .navbar #navbarLienSinscrire {
+    display: flex;
+    justify-content: flex-end;
+    grid-area: navbarLienSinscrire;
+  }
+
+  .navbar #navbarLienHebergements a:hover {
+    width: 70%;
+    text-align: center;
+    color: #0065fc;
+    border-top: none;
+    border-bottom: solid 3px #0065fc;
+  }
+
+  .navbar #navbarLienActivites a:hover {
+    width: 70%;
+    text-align: center;
+    color: #0065fc;
+    border-top: none;
+    border-bottom: solid 3px #0065fc;
+  }
+
+  .titrePrincipal {
+    font-size: 25px;
+    padding-top: 15px;
   }
 
   .trouvezUn {
     margin-left: 18%;
     margin-right: 18%;
     align-items: center;
+  }
+
+  #searchBar {
+    width: 175px;
   }
 
   #searchIcon {
@@ -656,8 +694,21 @@ body {
     background-color: white;
   }
 
+  #affPlus {
+    margin-bottom: 10px;
+  }
+
+  #titreActivites {
+    padding-bottom: 20px;
+  }
+
   .activitesGroup {
     margin-top: 20px;
+  }
+
+  .titreImg {
+    padding: 10px 0 0 13px;
+    margin-bottom: 1px;
   }
 
   .footer {
@@ -672,6 +723,10 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
+  }
+
+  .footerLien {
+    padding: 5px;
   }
 
 }
