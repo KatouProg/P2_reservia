@@ -472,6 +472,7 @@ body {
 /* Général */
 
   html {
+    width: 100%;
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -760,8 +761,7 @@ body {
     width: 75%;
     height:fit-content;
     background-color: #F2F2F2;
-    margin-left: 50px;
-    margin-bottom: 50px;
+    justify-content: center;
   }
 
   .blocsFooter {
