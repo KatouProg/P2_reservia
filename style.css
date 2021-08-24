@@ -636,7 +636,7 @@ body {
     background-color: #F2F2F2;
   }
 
-
+}
 @media screen and (max-width: 580px) {
 
 /* Header */
@@ -810,5 +810,4 @@ body {
   .h3Filters {
     margin: auto;
   }
-}
 }
