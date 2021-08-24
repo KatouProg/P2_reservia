@@ -798,8 +798,12 @@ body {
     margin-left: -15%;
   }
 
+  .filters {
+    margin: 0 auto;
+  }
+
   .filterButton {
-    width: 100%;
+    width: 70%;
     font-size: 0.7em;
   }
 
