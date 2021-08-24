@@ -879,6 +879,25 @@ main {
 
 @media screen and (max-width: 320px) {
   
+  html {
+    margin:0;
+  }
+  
+  body {
+    margin: 0 auto;
+  }
+  
+  main {
+    width: 95%;
+  
+  }
+
+  #searchBar {
+    align-items: center;
+    width: 130px;
+    padding-left: 5px;
+  }
+
 .lesPlusPop {
   display: flex;
   flex-wrap: wrap;
