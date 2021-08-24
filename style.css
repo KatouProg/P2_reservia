@@ -12,10 +12,25 @@ body {
     margin: 0;
   }
 
-  a {
-    text-decoration: none;
-    color: initial;
-  }
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgb(0, 0, 0);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgb(0, 0, 0);
+}
+
 
 /* Header */
 
@@ -55,7 +70,6 @@ body {
   }
   
   .navbar a {
-    color: black;
     text-decoration: none;
     padding: 25px;
   }
@@ -89,15 +103,23 @@ body {
   }
   
   .navbar #navbarLienActivites:hover {
-    color: #0065fc;
     border-top: solid 3px rgba(0, 101, 252, 1);
   }
 
   .navbar #navbarLienHebergements:hover {
-    color: #0065fc;
     border-top: solid 3px rgba(0, 101, 252, 1);
   }
   
+  .navbar #navbarLienActivites a:hover{
+    font-weight: bold;
+    color: rgba(0, 101, 252, 1);
+  }
+
+  .navbar #navbarLienHebergements a:hover {
+    font-weight: bold;
+    color: rgba(0, 101, 252, 1);
+  }
+
   .navbar #navbarLienSinscrire {
     grid-area: 1/5/2/6;
     color: #0065fc;
@@ -151,7 +173,7 @@ body {
 
 #searchBar {
   width: 220px;
-  padding: 0 0 0 19px;
+  padding: 0;
   border: none;
   border-top: solid 1px #F2F2F2;
   border-bottom: solid 1px #F2F2F2;
@@ -524,6 +546,21 @@ body {
 
 @media screen and (max-width: 768px) {
 
+/* Général */
+
+html {
+  margin:0;
+}
+
+body {
+  margin: 0 auto;
+}
+
+main {
+  width: 95%;
+
+}
+
 /* Header */  
 
   .navbar {
@@ -627,9 +664,8 @@ body {
 /* Footer */
 
   .footer {
-    width: 100%;
-    height: 100px;
-    max-width: 1440px;
+    width: 75%;
+    height: max-content;
     margin: auto;
     margin-top: 1400px;
     padding: 40px 0 0 40px;
@@ -639,13 +675,25 @@ body {
 }
 @media screen and (max-width: 580px) {
 
-/* Header */
+/* Général */
 
-body {
-  margin-right: 7%;
+html {
+  margin:0;
 }
 
+body {
+  margin: 0 auto;
+}
+
+main {
+  width: 95%;
+
+}
+
+/* Header */
+
   .navbar {
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -659,7 +707,7 @@ body {
   }
 
   #navbarLienSinscrire {
-    margin-right: 22%;
+    margin-right: 10%;
   }
 
   .navbar img {
@@ -684,26 +732,37 @@ body {
     grid-area: navbarLienSinscrire;
   }
 
+  .navbar #navbarLienHebergements {
+    border-top: none;
+    border-bottom: solid 3px rgb(0, 0, 0, 0.1);
+  }
+
+  .navbar #navbarLienActivites{
+    border-top: none;
+    border-bottom: solid 3px rgb(0, 0, 0, 0.1);
+  }
+
   .navbar #navbarLienHebergements:hover {
-    text-align: center;
+    font-weight: bold;
     color: #0065fc;
+    text-align: center;
     border-top: none;
     border-bottom: solid 3px rgba(0, 101, 252, 1);
   }
 
   .navbar #navbarLienActivites:hover {
-    text-align: center;
+    font-weight: bold;
     color: #0065fc;
+    text-align: center;
     border-top: none;
     border-bottom: solid 3px rgba(0, 101, 252, 1);
   }
-
 /* Main */
 
 /* Section Search */
 
   .titrePrincipal {
-    font-size: 25px;
+    font-size: 20px;
     padding-top: 15px;
   }
 
@@ -714,7 +773,9 @@ body {
   }
 
   #searchBar {
-    width: 175px;
+    align-items: center;
+    width: 180px;
+    padding-left: 10px;
   }
 
   #searchIcon {
@@ -729,15 +790,47 @@ body {
 
   .filters {
     display: flex;
-    flex-wrap: wrap;
-    margin-left: 18%;
-    margin-right: 18%;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+
+  .filters ul li {
+    margin-left: 20px;
+  }
+
+  .filterButton {
+    font-size: 0.85em;
+    font-weight: bold;
+  }
+  
+  .h3Filters {
+    margin: 0 0 0 30px;
   }
 
 /* Section Hébergement / Populaires */
 
   .hebergements {
     background-color: white;
+    padding: 10px;
+  }
+
+  .lesPlusPop {
+    border-radius: 0;
+    margin: 0 10px 0 0;
+    width: 95%;
+    padding: 30px 8px;
+  }
+  
+  #h1PlusPop {
+    padding-bottom: 20px;
+  }
+
+  .boxPop {
+    max-width: 97%;
+  }
+  
+  .nomHotel {
+    font-size: 1em;
   }
 
   #affPlus {
@@ -745,6 +838,10 @@ body {
   }
 
 /* Section Activités */
+
+  .activitesMarseille {
+    margin-top: 0 auto;
+  }
 
   #titreActivites {
     padding-bottom: 20px;
@@ -763,7 +860,7 @@ body {
 
   .footer {
     width: 75%;
-    height:fit-content;
+    height: max-content;
     background-color: #F2F2F2;
     justify-content: center;
   }
@@ -780,34 +877,28 @@ body {
 
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 320px) {
   
-/* Main */
+.lesPlusPop {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-/* Section Search */
+.boxPop {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
 
-  .titrePrincipal {
-    text-align: center;
-  }
+.imgPop {
+  border-radius: 10px;
+}
 
-  .sousTitre {
-    text-align: center;
-  }
-  
-  #searchSection {
-    margin-left: -15%;
-  }
+.imgHebergements {
+  border-radius: 10px;
+}
 
-  .filters {
-    margin: 0 auto;
-  }
-
-  .filterButton {
-    width: 70%;
-    font-size: 0.7em;
-  }
-
-  .h3Filters {
-    margin: auto;
+#activites{
+  padding-top: 400px;
   }
 }
